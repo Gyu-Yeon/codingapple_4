@@ -2,7 +2,7 @@
   
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">VueBlog</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,16 +25,21 @@
   </div>
 </nav>
 <button type="button" class="btn btn-primary">Primary</button>
-  
+  <list/>
 </template>
 
 <script>
-
-
+import list from './components/list.vue';
+import blog from './assets/blog.js';
 export default {
   name: 'App',
+  data(){
+    return{
+    블로그글 : blog,
+    }
+  },
   components: {
-    
+    list: list,
   }
 }
 </script>
